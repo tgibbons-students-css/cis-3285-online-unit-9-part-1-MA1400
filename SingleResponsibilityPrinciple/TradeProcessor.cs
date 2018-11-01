@@ -154,6 +154,12 @@ namespace SingleResponsibilityPrinciple
             var trades = ParseTrades(lines);
             StoreTrades(trades);
         }
+        public void ProcessTrades( string URL)
+        {
+            var lines = ReadURLTradeData(URL);
+            var trades = ParseTrades(lines);
+            StoreTrades(trades);
+        }
 
         public List<string> ReadURLTradeData(string URL)
         {
